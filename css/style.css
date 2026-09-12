@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins', cursive, sans-serif;
+}
+body{
+    color: azure;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+.greetings{
+    font-size: 6rem;
+    font-weight: 900;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #ff2a6d, 0 0 50px #ff2a6d, 0 0 100px #ff0a54;
+    }
+    10%, 90%{
+        color: #696565;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ff758c;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    
+    .button a{
+        font-size: .8rem;
+    }
+}
+
+/* Estilo para el botón */
+.button button {
+    background-color: #ff2a6d; /* Fondo rojo/rosa */
+    border: none; /* Sin bordes */
+    padding: 12px 28px; /* Ajusta el relleno según tu preferencia */
+    font-size: 18px; /* Tamaño de fuente */
+    cursor: pointer;
+    position: relative; /* Necesario para el resplandor */
+    border-radius: 20px; /* Esquinas redondeadas */
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out; /* Transición suave para el color de fondo */
+    box-shadow: 0 0 10px rgba(255, 42, 109, 0.4);
+}
+  
+/* Estilo para el enlace dentro del botón */
+.button button a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #ffffff; /* Color de texto blanco legible */
+}
+  
+/* Efecto de resplandor al pasar el cursor sobre el botón */
+.button button:hover {
+    background-color: #d90429; /* Cambia el color de fondo al pasar el mouse a rojo intenso */
+    box-shadow: 0 0 10px #ff2a6d, 0 0 25px #ff2a6d, 0 0 45px #ff0a54; /* Efecto de resplandor rojo */
+    transform: scale(1.05);
+}
